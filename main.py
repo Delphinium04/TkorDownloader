@@ -58,7 +58,7 @@ def get_webtoon_name(page):
 def get_ch_urls(page):
     ch_table = page.select_one('table.web_list')
     title_tag = ch_table.select('td.content__title')
-    ch_urls = []qm
+    ch_urls = []
     for tag in title_tag:
         ch_urls.append(base_url + tag.get('data-role'))
         # Latest Chapter -> First Chapter
